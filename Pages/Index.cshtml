@@ -1,0 +1,57 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    @*<h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+    <head>
+        <title>Chat GPT</title>
+    </head>
+    <body>
+        <header>
+            <div class="bgImage"><h1>Sandata BI CHATBOT </h1></div>
+
+        </header>
+        <main>
+            <select id="datasets">
+                <option value="Select a dataset">Select a dataset</option>
+                <option value="Visit">Visit</option>
+                <option value="Auto verification rates">Auto verification rates</option>
+                <option value="Clients">Clients</option>
+                <option value="Providers">Providers</option>
+                <option value="Employees">Employees</option>
+                <option value="Conflicts">Conflicts</option>
+                <option value="Exceptions">Exceptions</option>
+            </select>
+            <div class="popup">
+                <div class="popup-inner">
+                    <p id="popuptext">There is an error in SQL !!</p>
+                    <span class="popup-close">&times;</span>
+                </div>
+            </div>
+            <div class="input-box">
+                <textarea rows="3" id="question"></textarea>
+                <button id="prompt-btn">Prompt OpenAI API</button>
+            </div>
+            <div id="loader" class="loader">
+                <div class="loader-spinner"></div>
+                <div class="loader-text">Generating Response</div>
+            </div>
+            <div class="input-box">
+                <textarea id="result" rows="3" style="display:none;"></textarea>
+            </div>
+            <div class="input-box">
+                <button id="execute-btn" style="display:none;">Execute Query</button>
+            </div>
+            <div class="outputdata input-box" style="display:none;"></div>
+            <div class="input-box ">
+                <button id="clearButton" style="display:none;">Clear</button>
+            </div>
+        </main>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</div>
